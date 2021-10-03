@@ -1,6 +1,6 @@
 ## 電卓アプリ
 
-  <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/demo1.png" width="50%" height="50%"/></div>
+  <div style="text-align:center"><img src ="https://github.com/tailup0/SampleCalculator/blob/master/gifs%2Bimgs/demo1.png" width="50%" height="50%"/></div>
 
 ## 開発環境
   Xcode 12.4 / Swift 5
@@ -27,19 +27,19 @@
 
 1-1. UITextField（入力欄） を 2つ storyboad に追加
 
-> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/1.gif" /></div></details>
+> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/tailup0/SampleCalculator/blob/master/gifs%2Bimgs/1.gif" /></div></details>
 
 1-2. UIButton（計算ボタン, +ボタン, -ボタン） を 3つ storyboad に追加
 
-> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/2.png" /></div></details>
+> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/tailup0/SampleCalculator/blob/master/gifs%2Bimgs/2.png" /></div></details>
 
 1-3. UILabel（計算結果表示） を 2つ storyboad に追加
 
-> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/3.png" /></div></details>
+> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/tailup0/SampleCalculator/blob/master/gifs%2Bimgs/3.png" /></div></details>
 
 1-4. UITextField（入力欄） を 数値入力に変更
 
-> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/4.png" /></div></details>
+> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/tailup0/SampleCalculator/blob/master/gifs%2Bimgs/4.png" /></div></details>
 
 ## 2, 下記のコードを"ViewController.swift"に追加
 
@@ -105,7 +105,7 @@ class ViewController: UIViewController {
 
 ★ optionを押しながらViewController.swiftをダブルクリック
 
-> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/5.gif" /></div></details>
+> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/tailup0/SampleCalculator/blob/master/gifs%2Bimgs/5.gif" /></div></details>
 
 3-2. 各部品を "ViewController.swift" に紐付ける
 
@@ -121,11 +121,11 @@ class ViewController: UIViewController {
 答え表示ラベル => label1
 ```
 
-> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/6.gif" /></div></details>
+> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/tailup0/SampleCalculator/blob/master/gifs%2Bimgs/6.gif" /></div></details>
 
 ## 4, 追加課題1 掛け算と割り算を追加
 
-  <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/demo2.png" width="50%" height="50%"/></div>
+  <div style="text-align:center"><img src ="https://github.com/tailup0/SampleCalculator/blob/master/gifs%2Bimgs/demo2.png" width="50%" height="50%"/></div>
 
 #### 🗂 Main.storyboard
 
@@ -176,7 +176,7 @@ class ViewController: UIViewController {
 
 ★ optionを押しながらViewController.swiftをダブルクリック
 
-> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/5.gif" /></div></details>
+> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/tailup0/SampleCalculator/blob/master/gifs%2Bimgs/5.gif" /></div></details>
 
 4-2. 各部品を "ViewController.swift" に紐付ける
 
@@ -190,7 +190,7 @@ class ViewController: UIViewController {
 
 ## 5, 追加課題2 0で割り算時にlabel1に「エラー」と表示する
 
-  <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/demo3.png" width="50%" height="50%"/></div>
+  <div style="text-align:center"><img src ="https://github.com/tailup0/SampleCalculator/blob/master/gifs%2Bimgs/demo3.png" width="50%" height="50%"/></div>
 
 #### 🗂 ViewController.swift
 
