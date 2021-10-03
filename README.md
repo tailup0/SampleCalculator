@@ -13,9 +13,13 @@
 >
 > 0-2. "Create a new Xcode project"を選択。
 >
-> 0-3. "Single View Application"を選択して"Next"をクリック。
+> 0-3. "App"を選択して"Next"をクリック。
 >
-> 0-4. "User Interface"を"Storyboard"選択
+> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/tailup0/SampleCalculator/blob/master/gifs%2Bimgs/8.png" /></div></details>
+>
+> 0-4. "interface"を"Storyboard" "language"を"Swift"選択
+>
+> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/tailup0/SampleCalculator/blob/master/gifs%2Bimgs/7.png" /></div></details>
 >
 > 0-5. "Product name"を適当に入力して"Next"をクリック。
 >
