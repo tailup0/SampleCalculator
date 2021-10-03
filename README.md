@@ -2,8 +2,6 @@
 
   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/demo1.png" width="50%" height="50%"/></div>
 
-  当アカウントへ訪れていただき、誠にありがとうございます。第26回アプリ教室では、計算アプリを作ります。自分のペースで勉強したい、勉強前に予習したい、内容を復習したい場合、ご利用ください。
-
 ## 開発環境
   Xcode 12.4 / Swift 5
 
