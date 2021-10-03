@@ -1,6 +1,6 @@
 ## 電卓アプリ
 
-  <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/demo.png" width="50%" height="50%"/></div>
+  <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/demo1.png" width="50%" height="50%"/></div>
 
   当アカウントへ訪れていただき、誠にありがとうございます。第26回アプリ教室では、計算アプリを作ります。自分のペースで勉強したい、勉強前に予習したい、内容を復習したい場合、ご利用ください。
 
@@ -31,7 +31,7 @@
 
 > <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/1.gif" /></div></details>
 
-1-2. UIButton（計算ボタン, +ボタン, -ボタン） を 1つ storyboad に追加
+1-2. UIButton（計算ボタン, +ボタン, -ボタン） を 3つ storyboad に追加
 
 > <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/2.png" /></div></details>
 
@@ -54,25 +54,24 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var plsBtn: UIButton!
     @IBOutlet weak var minusBtn: UIButton!
-    @IBOutlet weak var multiBtn: UIButton!
-    @IBOutlet weak var divBtn: UIButton!
     @IBOutlet weak var input1: UITextField!
     @IBOutlet weak var input2: UITextField!
     @IBOutlet weak var label1: UILabel!
 
+    // 画面起動時に実行される
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
 
         // 初期はプラスボタンが選択される
         plsBtn.isSelected = true
     }
 
+    // +, - ボタン押下時の処理
     @IBAction func tappedButton(_ tappedButton: UIButton) {
         // すべてのボタンを未選択に戻す
         plsBtn.isSelected = false
         minusBtn.isSelected = false
-        multiBtn.isSelected = false
-        divBtn.isSelected = false
 
         // 選択ボタンをtrueにする
         tappedButton.isSelected = true
@@ -89,12 +88,6 @@ class ViewController: UIViewController {
         } else if minusBtn.isSelected {
             // 引き算して、ラベルに表示
             label1.text = "\(num1 - num2)"
-        } else if multiBtn.isSelected {
-            // 掛け算して、ラベルに表示
-            label1.text = "\(num1 * num2)"
-        } else if divBtn.isSelected {
-            // 割り算して、ラベルに表示
-            label1.text = "\(num1 / num2)"
         }
 
     }
@@ -116,25 +109,109 @@ class ViewController: UIViewController {
 
 > <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/5.gif" /></div></details>
 
-3-2. UITextField（入力欄） を 2つ "ViewController.swift" に紐付ける（connection を Outlet にする）
+3-2. 各部品を "ViewController.swift" に紐付ける
 
 ★ controlを押しながらドラッグ
+
+```
+■紐付け先
++ ボタン => plsBtn, tappedButton
+- ボタン => minusBtn, tappedButton
+計算 ボタン => tappedCalcButton
+入力欄1 => input1
+入力欄2 => input2
+答え表示ラベル => label1
+```
 
 > <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/6.gif" /></div></details>
 
-3-3. UILabel（計算結果表示） を "ViewController.swift" に紐付ける（connection を Outlet にする）
+## 4, 追加課題1 掛け算と割り算を追加
+
+  <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/demo2.png" width="50%" height="50%"/></div>
+
+#### 🗂 Main.storyboard
+
+4-1. UIButton（×ボタン, ÷ボタン） を 2つ storyboad に追加
+
+#### 🗂 ViewController.swift
+
+```Swift
+    // ヒント
+    @IBOutlet weak var multiBtn: UIButton!
+    @IBOutlet weak var divBtn: UIButton!
+
+    @IBAction func tappedButton(_ tappedButton: UIButton) {
+        // すべてのボタンを未選択に戻す
+        plsBtn.isSelected = false
+        minusBtn.isSelected = false
+        multiBtn.isSelected = false
+        divBtn.isSelected = false
+
+        // 選択ボタンをtrueにする
+        tappedButton.isSelected = true
+    }
+
+    @IBAction func tappedCalcButton(_ sender: UIButton) {
+        let num1 = Int(input1.text ?? "0") ?? 0
+        let num2 = Int(input2.text ?? "0") ?? 0
+
+        if plsBtn.isSelected {
+            // 足し算して、ラベルに表示
+            label1.text = "\(num1 + num2)"
+        } else if minusBtn.isSelected {
+            // 引き算して、ラベルに表示
+            label1.text = "\(num1 - num2)"
+        } else if multiBtn.isSelected {
+            // 掛け算して、ラベルに表示
+            label1.text = "\(num1 * num2)"
+        } else if divBtn.isSelected {
+            // 割り算して、ラベルに表示
+            label1.text = "\(num1 / num2)"
+        }
+
+    }
+```
+
+#### 🗂 Main.storyboard -> ViewController.swift
+
+4-1. 2画面に分割
+
+★ optionを押しながらViewController.swiftをダブルクリック
+
+> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/5.gif" /></div></details>
+
+4-2. 各部品を "ViewController.swift" に紐付ける
 
 ★ controlを押しながらドラッグ
 
-> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/7.gif" /></div></details>
+```
+■紐付け先
+× ボタン => multiBtn, tappedButton
+÷ ボタン => divBtn, tappedButton
+```
 
-3-4. UIButton（計算ボタン） を "ViewController.swift" に紐付ける（connection を Action にする）
+## 5, 追加課題2 0で割り算時にlabel1に「エラー」と表示する
 
-★ controlを押しながらドラッグ
+  <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/demo3.png" width="50%" height="50%"/></div>
 
-> <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/SampleCalculator/blob/master/gifs%2Bimgs/8.gif" /></div></details>
+#### 🗂 ViewController.swift
 
+```Swift
+    // ヒント
+    if num2 == 0 {
+        label1.text = "エラー"
+    } else {
+        label1.text = "\(num1 / num2)"
+    }
+```
 
-## 4, 追加課題
+## 6, 追加課題3 入力欄クリアボタンを追加
 
-#### 引き算や掛け算機能を追加
+#### 🗂 ViewController.swift
+
+```Swift
+    // ヒント
+    input1.text = ""
+    input2.text = ""
+```
+
