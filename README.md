@@ -113,12 +113,12 @@ class ViewController: UIViewController {
 
 ```
 ■紐付け先
-+ ボタン => plsBtn, tappedButton
-- ボタン => minusBtn, tappedButton
-計算 ボタン => tappedCalcButton
-入力欄1 => input1
-入力欄2 => input2
-答え表示ラベル => label1
+1) + ボタン => plsBtn, tappedButton
+2) - ボタン => minusBtn, tappedButton
+3) 計算 ボタン => tappedCalcButton
+4) 入力欄1 => input1
+5) 入力欄2 => input2
+6) 答え表示ラベル => label1
 ```
 
 > <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/tailup0/SampleCalculator/blob/master/gifs%2Bimgs/6.gif" /></div></details>
@@ -172,20 +172,20 @@ class ViewController: UIViewController {
 
 #### 🗂 Main.storyboard -> ViewController.swift
 
-4-1. 2画面に分割
+4-2. 2画面に分割
 
 ★ optionを押しながらViewController.swiftをダブルクリック
 
 > <details><summary>詳細画像をみる</summary><div style="text-align:center"><img src ="https://github.com/tailup0/SampleCalculator/blob/master/gifs%2Bimgs/5.gif" /></div></details>
 
-4-2. 各部品を "ViewController.swift" に紐付ける
+4-3. 各部品を "ViewController.swift" に紐付ける
 
 ★ controlを押しながらドラッグ
 
 ```
 ■紐付け先
-× ボタン => multiBtn, tappedButton
-÷ ボタン => divBtn, tappedButton
+1) × ボタン => multiBtn, tappedButton
+2) ÷ ボタン => divBtn, tappedButton
 ```
 
 ## 5, 追加課題2 0で割り算時にlabel1に「エラー」と表示する
