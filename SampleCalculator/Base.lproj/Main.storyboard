@@ -41,7 +41,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="tappedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oUt-VF-guy"/>
+                                    <action selector="tappedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="um1-70-Lqo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0i-a8-UOO">
@@ -136,7 +136,7 @@
                         <outlet property="label1" destination="eab-tR-igT" id="5vJ-mD-wfU"/>
                         <outlet property="minusBtn" destination="p0i-a8-UOO" id="Hnk-Av-ncs"/>
                         <outlet property="multiBtn" destination="BHQ-Gd-nIm" id="lqv-8M-A60"/>
-                        <outlet property="plsBtn" destination="GGU-F4-BiF" id="yJI-UX-tIx"/>
+                        <outlet property="plsBtn" destination="GGU-F4-BiF" id="4pd-Ne-vaH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

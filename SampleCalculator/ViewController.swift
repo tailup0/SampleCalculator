@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var input2: UITextField!
     @IBOutlet weak var label1: UILabel!
     
+    // 画面起動時に実行される
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
         plsBtn.isSelected = true
     }
 
+    // +, -, ×, ÷ ボタン押下時の処理
     @IBAction func tappedButton(_ tappedButton: UIButton) {
         // すべてのボタンを未選択に戻す
         plsBtn.isSelected = false
@@ -52,9 +54,12 @@ class ViewController: UIViewController {
             label1.text = "\(num1 * num2)"
         } else if divBtn.isSelected {
             // 割り算して、ラベルに表示
-            label1.text = "\(num1 / num2)"
+            if num2 == 0 {
+                label1.text = "エラー"
+            } else {
+                label1.text = "\(num1 / num2)"
+            }
         }
-        
     }
     
     // キーボード閉じるための処理
